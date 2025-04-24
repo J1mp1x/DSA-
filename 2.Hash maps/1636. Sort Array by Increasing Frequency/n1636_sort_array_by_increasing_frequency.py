@@ -1,3 +1,5 @@
+from collections import Counter
+
 class Solution(object):
     def frequencySort(self, nums):
         """
@@ -5,6 +7,5 @@ class Solution(object):
         :rtype: List[int]
         """
         freq = Counter(nums)
-
         nums.sort(key=lambda x: (freq[x], -x))
         return nums
